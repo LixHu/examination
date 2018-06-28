@@ -1,0 +1,6 @@
+{
+    "name": "examination",
+    "require": {
+        "php": ">=7.1.0"
+    }
+}
