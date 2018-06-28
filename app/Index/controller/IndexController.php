@@ -3,10 +3,13 @@
 namespace app\Index\controller;
 
 use lib\controller\Controller;
-use lib\model\Model;
+use lib\model\Model as model;
+
 class IndexController extends Controller
 {
     public function index() {
-        new Model('test');
+        $user = new model('user');
+        $data = $user->find();
+        var_dump($data);
     }
 }

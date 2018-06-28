@@ -20,6 +20,8 @@ class Datebase
     private $pass;
     // 端口
     private $port;
+    //方法
+    protected $method = array('strict','order','alias','having','group','lock','distinct','auto','filter','validate','result','token','index','force');
     // 最近错误信息
     private $error;
     // 数据库对象
@@ -75,7 +77,7 @@ class Datebase
     }
 
 
-    function __call($method, $args)
+    public function __call($method, $args)
     {
         if (in_array(strtolower($method),$this->method,true)) {
             // 连贯操作的实现

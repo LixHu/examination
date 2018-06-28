@@ -5,6 +5,9 @@ namespace lib\controller;
 
 class Controller
 {
-    
+    public function __call($name, $arguments)
+    {
+        var_dump($name);
+    }
 }
 
